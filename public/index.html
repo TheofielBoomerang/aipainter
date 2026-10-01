@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Painter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <!-- 1. Start -->
+    <section id="screen-start" class="screen active">
+      <h1>AI Painter</h1>
+      <p class="sub">Laat je portret schilderen</p>
+      <div class="frame"><video id="camera" autoplay playsinline muted></video></div>
+      <button id="btn-start" class="btn">Start</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <!-- 2. Wachten: het filmpje -->
+    <section id="screen-wait" class="screen">
+      <video id="wait-video" src="wachtfilmpje.mp4" playsinline preload="auto"></video>
+      <p class="wait-label">De schilder is aan het werk…</p>
+    </section>
+
+    <!-- 3. Resultaat -->
+    <section id="screen-result" class="screen">
+      <div class="painting-frame"><img id="painting" alt="Jouw schilderij" /></div>
+      <button id="btn-again" class="btn">Opnieuw</button>
+    </section>
+  </main>
+
+  <div id="countdown" class="countdown"></div>
+  <div id="flash" class="flash"></div>
+  <canvas id="canvas" hidden></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
